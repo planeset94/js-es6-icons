@@ -4,3 +4,27 @@
     padding: 0;
 }
 
+header, nav, main{
+    width: 100%;
+}
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+header h1{
+    color: #2ab1dd;
+    padding-top: 1rem;
+   
+}
+nav{
+    background-color: #2ab1dd;
+}
+#nav_container{
+    padding: 0.75rem 0;
+    text-align: center;
+}
+#nav_container label{
+    text-transform: uppercase;
+    margin-right: 0.5rem;
+    color: #d7f0f8;
+}
