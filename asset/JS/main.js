@@ -3,7 +3,9 @@ let animals = [
         name: 'cat',
         prefix: 'fa-',
         type: 'animal',
-        family: 'fas'
+        family: 'fas',
+
+
     },
     {
         name: 'crow',
@@ -93,12 +95,30 @@ let animals = [
         name: 'user-secret',
         prefix: 'fa-',
         type: 'user',
-        family: 'fas'
+        family: 'fas',
     }
 ];
+let animalEl = document.getElementById('square');
 
 animals.forEach(animal => {
+    console.log(animal.name);
+    console.log(animal.family);
+    console.log(animal.type);
+    animalEl.insertAdjacentHTML('beforeend', `
+
+<div class="animal_card"> 
+
+<i class="fas fa-${animal.name}"></i>
+<p class="animal_name" >${animal.name}</p>
+
+</div>
+
+`);
+
+
+
 
 
 
 });
+
