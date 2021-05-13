@@ -104,14 +104,11 @@ let animals = [
 let animalEl = document.getElementById('square');
 
 animals.forEach(animal => {
-    console.log(animal.name);
-    console.log(animal.family);
-    console.log(animal.type);
     animalEl.insertAdjacentHTML('beforeend', `
 
 <div class="animal_card"> 
 
-<i class="fas fa-${animal.name} ${animal.type}"></i>
+<i id="" class="fas fa-${animal.name}" style="color:${colorFunction()}"></i>
 <p class="animal_name" >${animal.name}</p>
 
 </div>
@@ -120,7 +117,20 @@ animals.forEach(animal => {
 
 });
 
-// Milestone 2 Coloriamo le icone per tipo
+function colorFunction() {
+    let colore;
+    animals.forEach(animal => {
+        if (animal.type === 'animal') {
+            colore = "#0600ff";
+        } else if (animal.type === 'user') {
+            colore = "#800080";
+        } else {
+            colore = "#ffa500";
+        };
 
 
 
+    });
+    return colore;
+
+};
