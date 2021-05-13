@@ -1,3 +1,6 @@
+// Milestone 1:
+// Partendo dalla seguente struttura dati , mostriamo in pagina tutte le icone disponibili come da layout.
+
 let animals = [
     {
         name: 'cat',
@@ -108,17 +111,16 @@ animals.forEach(animal => {
 
 <div class="animal_card"> 
 
-<i class="fas fa-${animal.name}"></i>
+<i class="fas fa-${animal.name} ${animal.type}"></i>
 <p class="animal_name" >${animal.name}</p>
 
 </div>
 
 `);
 
-
-
-
-
-
 });
+
+// Milestone 2 Coloriamo le icone per tipo
+
+
 
