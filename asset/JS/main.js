@@ -106,6 +106,8 @@ let squareEl = document.getElementById('square');
 
 
 let colore;
+
+
 items.forEach(el => {
     const { type } = el;
     console.log(type);
@@ -117,25 +119,18 @@ items.forEach(el => {
         colore = "#ffa500";
     };
 
-});
 
-
-
-
-
-
-
-items.forEach(el => {
     squareEl.insertAdjacentHTML('beforeend', `
 
-<div class="el_card"> 
+        <div class="el_card"> 
 
-<i id="" class="fas fa-${el.name}" style="color:${colore}"></i>
-<p class="el_name" >${el.name}</p>
+        <i id="" class="fas fa-${el.name}" style="color:${colore}"></i>
+        <p class="el_name" >${el.name}</p>
 
-</div>
+        </div>
 
-`);
+        `);
 
 });
+
 
