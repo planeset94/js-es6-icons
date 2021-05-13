@@ -1,7 +1,7 @@
 // Milestone 1:
 // Partendo dalla seguente struttura dati , mostriamo in pagina tutte le icone disponibili come da layout.
 
-let animals = [
+let items = [
     {
         name: 'cat',
         prefix: 'fa-',
@@ -101,15 +101,15 @@ let animals = [
         family: 'fas',
     }
 ];
-let animalEl = document.getElementById('square');
+let squareEl = document.getElementById('square');
 
-animals.forEach(animal => {
-    animalEl.insertAdjacentHTML('beforeend', `
+items.forEach(el => {
+    squareEl.insertAdjacentHTML('beforeend', `
 
-<div class="animal_card"> 
+<div class="el_card"> 
 
-<i id="" class="fas fa-${animal.name}" style="color:${colorFunction()}"></i>
-<p class="animal_name" >${animal.name}</p>
+<i id="" class="fas fa-${el.name}" style="color:${colore}"></i>
+<p class="el_name" >${el.name}</p>
 
 </div>
 
@@ -119,10 +119,10 @@ animals.forEach(animal => {
 
 function colorFunction() {
     let colore;
-    animals.forEach(animal => {
-        if (animal.type === 'animal') {
+    items.forEach(el => {
+        if (el.type === 'el') {
             colore = "#0600ff";
-        } else if (animal.type === 'user') {
+        } else if (el.type === 'user') {
             colore = "#800080";
         } else {
             colore = "#ffa500";
