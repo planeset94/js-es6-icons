@@ -103,6 +103,28 @@ let items = [
 ];
 let squareEl = document.getElementById('square');
 
+
+
+let colore;
+items.forEach(el => {
+    const { type } = el;
+    console.log(type);
+    if (type == "animal") {
+        colore = "#0600ff";
+    } else if (type == "user") {
+        colore = "#800080";
+    } else if (type == "vegetable") {
+        colore = "#ffa500";
+    };
+
+});
+
+
+
+
+
+
+
 items.forEach(el => {
     squareEl.insertAdjacentHTML('beforeend', `
 
@@ -117,20 +139,3 @@ items.forEach(el => {
 
 });
 
-function colorFunction() {
-    let colore;
-    items.forEach(el => {
-        if (el.type === 'el') {
-            colore = "#0600ff";
-        } else if (el.type === 'user') {
-            colore = "#800080";
-        } else {
-            colore = "#ffa500";
-        };
-
-
-
-    });
-    return colore;
-
-};
