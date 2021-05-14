@@ -46,6 +46,7 @@ div.el_card{
     height: auto;
     padding: 1rem 0;
     margin: 2rem 0;
+    text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -62,16 +63,4 @@ p.el_name{
     font-size: 1.8rem;
     margin-bottom: 5px;
 }
-
-/* .animal_card i .animal{
-color: #0600ff;
-
-}
-.animal_card i .vegetable{
-color: #ffa500;
-}
-.animal_card i .user{
-color: #800080;
-} */
-
 

@@ -102,14 +102,14 @@ let items = [
     }
 ];
 let squareEl = document.getElementById('square');
-
+let selectEl = document.getElementById('typology');
 
 
 let colore;
 
 
 items.forEach(el => {
-    const { type } = el;
+    var { type } = el;
     console.log(type);
     if (type == "animal") {
         colore = "#0600ff";
@@ -120,9 +120,10 @@ items.forEach(el => {
     };
 
 
+
     squareEl.insertAdjacentHTML('beforeend', `
 
-        <div class="el_card"> 
+        <div id="cartella" class="el_card" data-type=${el.type}> 
 
         <i id="" class="fas fa-${el.name}" style="color:${colore}"></i>
         <p class="el_name" >${el.name}</p>
@@ -131,6 +132,21 @@ items.forEach(el => {
 
         `);
 
+
 });
 
+let cardEl = document.querySelectorAll('.el_card');
+selectEl.addEventListener('change', () => {
+    cardEl.forEach((card) => {
+        if (selectEl.value == "All") {
+            card.style.display = "block";
+        } else if (card.getAttribute('data-type') == selectEl.value) {
+            // console.log('visibile');
+            card.style.display = "block";
+        } else {
+            console.log('not-visible');
+            card.style.display = "none";
+        };
+    });
 
+});
